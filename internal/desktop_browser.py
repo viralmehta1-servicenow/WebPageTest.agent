@@ -155,7 +155,7 @@ class DesktopBrowser(BaseBrowser):
                     subprocess.call(['sudo', 'cp', hosts_file, hosts_backup])
                     subprocess.call(['sudo', 'cp', hosts_tmp, hosts_file])
                     os.unlink(hosts_tmp)
-                    logging.debug(hosts_text)
+                    #logging.debug(hosts_text)
             except Exception as err:
                 logging.exception("Exception modifying hosts file: %s", err.__str__())
 
@@ -406,7 +406,7 @@ class DesktopBrowser(BaseBrowser):
 
     def prepare_script_for_record(self, script, mark_start = False):
         """Convert a script command into one that first removes the orange frame"""
-        mark = "fetch('http://127.0.0.1:8888/wpt-start-recording');" if mark_start else ''
+        mark = "fetch('http://127.0.0.1:8885/wpt-start-recording');" if mark_start else ''
         return "(function() {" \
                "var wptDiv = document.getElementById('wptorange');" \
                "if(wptDiv) {wptDiv.parentNode.removeChild(wptDiv);}" \

@@ -171,7 +171,7 @@ class MessageServer(object):
         proxies = {"http": None, "https": None}
         while not server_ok and monotonic() < end_time:
             try:
-                response = requests.get('http://127.0.0.1:8888/ping', timeout=10, proxies=proxies)
+                response = requests.get('http://127.0.0.1:8885/ping', timeout=10, proxies=proxies)
                 if response.text == 'pong':
                     server_ok = True
             except Exception:
@@ -182,12 +182,12 @@ class MessageServer(object):
 
     def run(self):
         """Main server loop"""
-        logging.debug('Starting extension server on port 8888')
+        logging.debug('Starting extension server on port 8885')
         try:
             asyncio.set_event_loop(asyncio.new_event_loop())
         except Exception:
             pass
         application = tornado.web.Application([(r"/.*", TornadoRequestHandler)])
-        application.listen(8888, '127.0.0.1')
+        application.listen(8885, '127.0.0.1')
         self.__is_started.set()
         tornado.ioloop.IOLoop.instance().start()

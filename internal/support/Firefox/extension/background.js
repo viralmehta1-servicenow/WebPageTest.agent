@@ -1,4 +1,4 @@
-var SERVER = "http://127.0.0.1:8888/";
+var SERVER = "http://127.0.0.1:8885/";
 var messages = '';
 var message_timer = undefined;
 var last_send = undefined;

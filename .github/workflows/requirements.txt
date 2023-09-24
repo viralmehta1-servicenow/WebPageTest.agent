@@ -1,7 +1,7 @@
 pylint
 pytest
 numpy
-selenium
+selenium==4.9.0
 psutil
 pillow
 requests

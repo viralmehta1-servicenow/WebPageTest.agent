@@ -48,7 +48,7 @@ class SafariDesktop(DesktopBrowser):
         self.long_tasks = []
         self.last_activity = monotonic()
         self.script_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'js')
-        self.start_page = 'http://127.0.0.1:8888/orange.html'
+        self.start_page = 'http://127.0.0.1:8885/orange.html'
         self.safari_log = None
         self.safari_log_thread = None
         self.stop_safari_log = False

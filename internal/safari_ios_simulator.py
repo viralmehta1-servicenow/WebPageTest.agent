@@ -22,7 +22,7 @@ class SafariSimulator(DesktopBrowser, DevtoolsBrowser):
         self.options = options
         DesktopBrowser.__init__(self, None, options, job)
         DevtoolsBrowser.__init__(self, options, job, use_devtools_video=False, is_webkit=True, is_ios=True)
-        self.start_page = 'http://127.0.0.1:8888/orange.html'
+        self.start_page = 'http://127.0.0.1:8885/orange.html'
         self.connected = False
         self.webinspector_proxy = None
         self.device_id = browser_info['device']['udid']

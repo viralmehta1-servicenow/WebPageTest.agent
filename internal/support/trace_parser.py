@@ -496,7 +496,7 @@ class Trace():
                 'args' in trace_event and \
                 'data' in trace_event['args'] and \
                 'url' in trace_event['args']['data'] and \
-                trace_event['args']['data']['url'] == 'http://127.0.0.1:8888/wpt-start-recording':
+                trace_event['args']['data']['url'] == 'http://127.0.0.1:8885/wpt-start-recording':
             self.marked_start_time = trace_event['ts']
             self.start_time = trace_event['ts']
 
@@ -504,7 +504,7 @@ class Trace():
         if 'args' in trace_event and 'data' in trace_event['args'] and \
                 thread not in self.ignore_threads:
             if 'url' in trace_event['args']['data'] and \
-                    trace_event['args']['data']['url'].startswith('http://127.0.0.1:8888'):
+                    trace_event['args']['data']['url'].startswith('http://127.0.0.1:8885'):
                 self.ignore_threads[thread] = True
             if self.cpu['main_thread'] is None or 'isMainFrame' in trace_event['args']['data']:
                 if ('isMainFrame' in trace_event['args']['data'] and \

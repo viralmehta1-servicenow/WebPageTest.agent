@@ -81,7 +81,7 @@ class FirefoxLogParser(object):
         # Pull out the network requests and sort them
         for request_id in self.http['requests']:
             request = self.http['requests'][request_id]
-            if 'url' in request and request['url'][0:22] != 'http://127.0.0.1:8888/'\
+            if 'url' in request and request['url'][0:22] != 'http://127.0.0.1:8885/'\
                     and 'start' in request:
                 request['id'] = request_id
                 requests.append(dict(request))

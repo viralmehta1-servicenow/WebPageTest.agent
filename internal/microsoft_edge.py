@@ -65,7 +65,7 @@ class Edge(DesktopBrowser):
         self.bodies_path = None
         self.pid = None
         self.supports_interactive = True
-        self.start_page = 'http://127.0.0.1:8888/config.html'
+        self.start_page = 'http://127.0.0.1:8885/config.html'
         self.edge_registry_path = r"SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\Privacy"
         self.edge_registry_key_value = 0
         self.total_sleep = 0
@@ -422,7 +422,7 @@ class Edge(DesktopBrowser):
             if 'URL' in message['data'] and \
                     message['data']['URL'].startswith('http') and \
                     message['data']['URL'].startswith('http') and \
-                    not message['data']['URL'].startswith('http://127.0.0.1:8888'):
+                    not message['data']['URL'].startswith('http://127.0.0.1:8885'):
                 tid = message['data']['EventContextId']  if 'EventContextId' in message['data'] else  message['tid']
                 self.pageContexts.append(tid)
                 self.CMarkup.append(message['data']['CMarkup'])

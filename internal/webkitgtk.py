@@ -17,7 +17,7 @@ class WebKitGTK(DesktopBrowser, DevtoolsBrowser):
         self.options = options
         DesktopBrowser.__init__(self, path, options, job)
         DevtoolsBrowser.__init__(self, options, job, use_devtools_video=False, is_webkit=True)
-        self.start_page = 'http://127.0.0.1:8888/orange.html'
+        self.start_page = 'http://127.0.0.1:8885/orange.html'
         self.connected = False
 
     def shutdown(self):

@@ -69,7 +69,7 @@ class Firefox(DesktopBrowser):
         self.long_tasks = []
         self.last_activity = monotonic()
         self.script_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'js')
-        self.start_page = 'http://127.0.0.1:8888/orange.html'
+        self.start_page = 'http://127.0.0.1:8885/orange.html'
         self.block_domains = [
             "tracking-protection.cdn.mozilla.net",
             "shavar.services.mozilla.com",
@@ -157,6 +157,9 @@ class Firefox(DesktopBrowser):
             }
         }
         service_args = ["--marionette-port", "2828"]
+
+        
+
 
         self.driver = webdriver.Firefox(desired_capabilities=capabilities, service_args=service_args)
         logging.debug(self.driver.capabilities)

@@ -1,4 +1,4 @@
-var SERVER = "http://127.0.0.1:8888/";
+var SERVER = "http://127.0.0.1:8885/";
 var blockingWebRequest = false;
 var block = [];
 var block_domains = [];

@@ -81,7 +81,7 @@ class ChromeDesktop(DesktopBrowser, DevtoolsBrowser):
         DesktopBrowser.__init__(self, path, options, job)
         use_devtools_video = True if self.job['capture_display'] is None else False
         DevtoolsBrowser.__init__(self, options, job, use_devtools_video=use_devtools_video)
-        self.start_page = 'http://127.0.0.1:8888/orange.html'
+        self.start_page = 'http://127.0.0.1:8885/orange.html'
         self.connected = False
         self.is_chrome = True
         self.netlog_fifo = None
