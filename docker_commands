@@ -1,0 +1,4 @@
+ docker build --platform linux/amd64 --tag wptagent_amd64 .
+
+
+ docker run -d  --network="host" --mount type=bind,src=/Users/viral.mehta1/Documents/code/wptagent,dst=/wptagent -e SERVER_URL="http://localhost:81/work/" -e LOCATION="Test" --platform linux/amd64 -e NAME=OOB_WPT_Agent -e "SHAPER=chrome" -e EXTRA_ARGS="--har --healthcheckport=8887 --dockerized --collectversion" --init --name wptagent_oob_amd64 wptagent_oob_amd64
